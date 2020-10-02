@@ -41,10 +41,6 @@ $(document).ready(function () {
                         var uvIndex = response.value;
                         console.log(uvIndex);
                         $("#uv").text("UV Index: " + uvIndex).appendTo($("#maininfo"));
-                        colorcode()
-                        
-                    });
-                    function colorcode(uvIndex) {
                         if (uvIndex <= 2) {
                             $("#uv").addClass("uvlow");
                         } else if (uvIndex > 2 || uvIndex <= 5) {
@@ -56,7 +52,8 @@ $(document).ready(function () {
                         } else {
                             $("#uv").addClass("uvextreme");
                         };
-                    }
+                        
+                    });
             });
         // Forecast
         $.ajax({
