@@ -21,19 +21,19 @@
         <div class="row">
 
             <div class="col-3">
-                <p>Search for a City:</p>
+                <p id="citysearch">Search for a City:</p>
                 <input id="cityname">
                 <button id="searchbtn">search</button>
                 <div id="history" style="width:250px;height:500px;border:1px solid #000">
                 </div>
             </div>
             <div class="col-9">
-                <div id="maininfo" style="width:900px;height:350px;border:1px solid #000">
+                <div id="maininfo" style="width:900px;height:350px;border:1px solid lightgray">
                     <h2 id="citytitle"></h2>
-                    <p id="temp"></p>
-                    <p id="humid"></p>
-                    <p id="wind"></p>
-                    <p id="uv"></p>
+                    <p id="temp" class="currentinfo"></p>
+                    <p id="humid" class="currentinfo"></p>
+                    <p id="wind" class="currentinfo"></p>
+                    <p id="uv" class="currentinfo"></p>
 
                 </div>
                 <div class="container" id="forecast" style="width:900px;height:200px;border:1px solid #000">
@@ -49,13 +49,13 @@
                         <div class="col-2" id="dayfour"></div>
                         <div class="col-2" id="dayfive"></div>
                     </div>
-                    
                 </div>
 
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript" src="./script.js"></script>
 </body>
 

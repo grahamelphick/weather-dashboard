@@ -2,3 +2,26 @@ h1 {
     color: white;
     background-color: black;
     text-align: center;
+}
+
+#uv {
+    highlight: red;
+    color: white;
+}
+
+#searchbtn {
+    color: white;
+    background-color: #007BFF;
+}
+
+#citysearch {
+    font-size: 20px;
+}
+
+#citytitle {
+    padding: 15px;
+}
+
+.currentinfo {
+    padding-left: 15px;
+}
