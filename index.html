@@ -21,12 +21,36 @@
         <div class="row">
 
             <div class="col-3">
-                <input>
-                <button>search</button>
-                <div id="history" style="width:300px;height:500px;border:1px solid #000">
+                <p>Search for a City:</p>
+                <input id="cityname">
+                <button id="searchbtn">search</button>
+                <div id="history" style="width:250px;height:500px;border:1px solid #000">
                 </div>
             </div>
             <div class="col-9">
+                <div id="maininfo" style="width:900px;height:350px;border:1px solid #000">
+                    <h2 id="citytitle"></h2>
+                    <p id="temp"></p>
+                    <p id="humid"></p>
+                    <p id="wind"></p>
+                    <p id="uv"></p>
+
+                </div>
+                <div class="container" id="forecast" style="width:900px;height:200px;border:1px solid #000">
+                    <div class="row">
+                        <div class="col-3" id="fivedaytitle">
+                            <h3 id="fiveday"></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2" id="dayone"></div>
+                        <div class="col-2" id="daytwo"></div>
+                        <div class="col-2" id="daythree"></div>
+                        <div class="col-2" id="dayfour"></div>
+                        <div class="col-2" id="dayfive"></div>
+                    </div>
+                    
+                </div>
 
             </div>
         </div>
