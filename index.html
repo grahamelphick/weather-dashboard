@@ -24,7 +24,7 @@
                 <p id="citysearch">Search for a City:</p>
                 <input id="cityname">
                 <button id="searchbtn">search</button>
-                <div id="history" style="width:250px;height:500px;border:1px solid #000">
+                <div id="history">
                 </div>
             </div>
             <div class="col-9">
@@ -36,18 +36,38 @@
                     <p id="uv" class="currentinfo"></p>
 
                 </div>
-                <div class="container" id="forecast" style="width:900px;height:200px;border:1px solid #000">
+                <div class="container" id="forecast">
                     <div class="row">
                         <div class="col-3" id="fivedaytitle">
                             <h3 id="fiveday"></h3>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-2" id="dayone"></div>
-                        <div class="col-2" id="daytwo"></div>
-                        <div class="col-2" id="daythree"></div>
-                        <div class="col-2" id="dayfour"></div>
-                        <div class="col-2" id="dayfive"></div>
+                        <div class="col-2 alldays" id="dayone">
+                            <p class="alldaytext daydate" id="dayone-date"></p>
+                            <p class="alldaytext" id="dayonetemp"></p>
+                            <p class="alldaytext" id="dayonehumid"></p>
+                        </div>
+                        <div class="col-2 alldays" id="daytwo">
+                            <p class="alldaytext daydate" id="daytwo-date"></p>
+                            <p class="alldaytext" id="daytwotemp"></p>
+                            <p class="alldaytext" id="daytwohumid"></p>
+                        </div>
+                        <div class="col-2 alldays"id="daythree">
+                            <p class="alldaytext daydate" id="daythree-date"></p>
+                            <p class="alldaytext" id="daythreetemp"></p>
+                            <p class="alldaytext" id="daythreehumid"></p>
+                        </div>
+                        <div class="col-2 alldays" id="dayfour">
+                            <p class="alldaytext daydate" id="dayfour-date"></p>
+                            <p class="alldaytext" id="dayfourtemp"></p>
+                            <p class="alldaytext" id="dayfourhumid"></p>
+                        </div>
+                        <div class="col-2 alldays" id="dayfive">
+                            <p class="alldaytext daydate" id="dayfive-date"></p>
+                            <p class="alldaytext" id="dayfivetemp"></p>
+                            <p class="alldaytext" id="dayfivehumid"></p>
+                        </div>
                     </div>
                 </div>
 

@@ -1,13 +1,15 @@
 h1 {
     color: white;
-    background-color: black;
+    background-color: #343A40;
+    text-align: center;
+    padding: 10px;
     text-align: center;
 }
 
-#uv {
-    highlight: red;
+/* #uv {
+    background-color: red;
     color: white;
-}
+} */
 
 #searchbtn {
     color: white;
@@ -24,4 +26,43 @@ h1 {
 
 .currentinfo {
     padding-left: 15px;
+}
+
+#fiveday {
+    padding: 15px;
+    text-align: left;
+}
+
+.alldays {
+    color: white;
+    margin: 10px;
+}
+
+.alldaytext {
+    padding: 5px;
+    text-align: left;
+}
+
+.daydate {
+    font-weight: bold;
+}
+
+.uvlow {
+    background-color: green;
+}
+
+.uvmoderate {
+    background-color: yellow;
+}
+
+.uvhigh {
+    background-color: orange;
+}
+
+.uvveryhigh {
+    background-color: red;
+}
+
+.uvextreme {
+    background-color: violet;
 }

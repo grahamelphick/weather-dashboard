@@ -41,7 +41,22 @@ $(document).ready(function () {
                         var uvIndex = response.value;
                         console.log(uvIndex);
                         $("#uv").text("UV Index: " + uvIndex).appendTo($("#maininfo"));
+                        colorcode()
+                        
                     });
+                    function colorcode(uvIndex) {
+                        if (uvIndex <= 2) {
+                            $("#uv").addClass("uvlow");
+                        } else if (uvIndex > 2 || uvIndex <= 5) {
+                            $("#uv").addClass("uvmoderate");
+                        } else if (uvIndex > 5 || uvIndex <=7) {
+                            $("#uv").addClass("uvhigh");
+                        } else if (uvIndex > 7 || uvIndex <=10) {
+                            $("#uv").addClass("uvveryhigh");
+                        } else {
+                            $("#uv").addClass("uvextreme");
+                        };
+                    }
             });
         // Forecast
         $.ajax({
@@ -62,25 +77,28 @@ $(document).ready(function () {
 
                 console.log(response);
                 $("#fiveday").text("5-Day Forecast:").appendTo("#fivedaytitle");
-                $("<p>").text(dayOneDate).appendTo("#dayone");
-                $("<p>").text("Temp: " + response.list[10].main.temp).appendTo("#dayone");
-                $("<p>").text("Humidity: " + response.list[10].main.humidity).appendTo("#dayone");
 
-                $("<p>").text(dayTwoDate).appendTo("#daytwo");
-                $("<p>").text("Temp: " + response.list[18].main.temp).appendTo("#daytwo");
-                $("<p>").text("Humidity: " + response.list[18].main.humidity).appendTo("#daytwo");
+                $(".alldays").css("background-color", "#007BFF");
 
-                $("<p>").text(dayThreeDate).appendTo("#daythree");
-                $("<p>").text("Temp: " + response.list[26].main.temp).appendTo("#daythree");
-                $("<p>").text("Humidity: " + response.list[26].main.humidity).appendTo("#daythree");
+                $("#dayone-date").text(dayOneDate).appendTo("#dayone");
+                $("#dayonetemp").text("Temp: " + response.list[10].main.temp).appendTo("#dayone");
+                $("#dayonehumid").text("Humidity: " + response.list[10].main.humidity).appendTo("#dayone");
 
-                $("<p>").text(dayFourDate).appendTo("#dayfour");
-                $("<p>").text("Temp: " + response.list[34].main.temp).appendTo("#dayfour");
-                $("<p>").text("Humidity: " + response.list[34].main.humidity).appendTo("#dayfour");
+                $("#daytwo-date").text(dayTwoDate).appendTo("#daytwo");
+                $("#daytwotemp").text("Temp: " + response.list[18].main.temp).appendTo("#daytwo");
+                $("#daytwohumid").text("Humidity: " + response.list[18].main.humidity).appendTo("#daytwo");
 
-                $("<p>").text(dayFiveDate).appendTo("#dayfive");
-                $("<p>").text("Temp: " + response.list[34].main.temp).appendTo("#dayfive");
-                $("<p>").text("Humidity: " + response.list[34].main.humidity).appendTo("#dayfive");
+                $("#daythree-date").text(dayThreeDate).appendTo("#daythree");
+                $("#daythreetemp").text("Temp: " + response.list[26].main.temp).appendTo("#daythree");
+                $("#daythreehumid").text("Humidity: " + response.list[26].main.humidity).appendTo("#daythree");
+
+                $("#dayfour-date").text(dayFourDate).appendTo("#dayfour");
+                $("#dayfourtemp").text("Temp: " + response.list[34].main.temp).appendTo("#dayfour");
+                $("#dayfourhumid").text("Humidity: " + response.list[34].main.humidity).appendTo("#dayfour");
+
+                $("#dayfive-date").text(dayFiveDate).appendTo("#dayfive");
+                $("#dayfivetemp").text("Temp: " + response.list[34].main.temp).appendTo("#dayfive");
+                $("#dayfivehumid").text("Humidity: " + response.list[34].main.humidity).appendTo("#dayfive");
             });
     });
 });
