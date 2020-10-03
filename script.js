@@ -9,6 +9,11 @@ $(document).ready(function () {
         var forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySelection + "&units=imperial" + "&appid=" + APIKey;
         var currentDate = moment().format("L");
 
+        // var searchedCities = []
+        // var cityHistory = $("#cityname").val()
+        // searchedCities.push(cityHistory)
+        // cityHistory.appendTo($("#history"))
+        // ($("#history")).append($("<button>").text(citySelection.val()))
         // current day stats
         $.ajax({
             url: currentQueryURL,
@@ -41,17 +46,27 @@ $(document).ready(function () {
                         var uvIndex = response.value;
                         console.log(uvIndex);
                         $("#uv").text("UV Index: " + uvIndex).appendTo($("#maininfo"));
-                        if (uvIndex <= 2) {
-                            $("#uv").addClass("uvlow");
-                        } else if (uvIndex > 2 || uvIndex <= 5) {
-                            $("#uv").addClass("uvmoderate");
-                        } else if (uvIndex > 5 || uvIndex <=7) {
-                            $("#uv").addClass("uvhigh");
-                        } else if (uvIndex > 7 || uvIndex <=10) {
-                            $("#uv").addClass("uvveryhigh");
-                        } else {
-                            $("#uv").addClass("uvextreme");
-                        };
+                        
+                        function indexColor() {
+                            if (uvIndex <= 2) {
+                                $("#uv").css("background-color", "green")
+                                // $("#uv").addClass("uvlow");
+                            } else if (uvIndex > 2 && uvIndex <= 5) {
+                                $("#uv").css("background-color", "yellow")
+                                // $("#uv").addClass("uvmoderate");
+                            } else if (uvIndex > 5 && uvIndex <=7) {
+                                $("#uv").css("background-color", "orange")
+                                // $("#uv").addClass("uvhigh");
+                            } else if (uvIndex > 7 && uvIndex <=10) {
+                                $("#uv").css("background-color", "red")
+                                // $("#uv").addClass("uvveryhigh");
+                            } else {
+                                $("#uv").css("background-color", "violet")
+                                // $("#uv").addClass("uvextreme");
+                            };
+                        }
+                        
+                        indexColor()
                         
                     });
             });
@@ -96,6 +111,6 @@ $(document).ready(function () {
                 $("#dayfive-date").text(dayFiveDate).appendTo("#dayfive");
                 $("#dayfivetemp").text("Temp: " + response.list[34].main.temp).appendTo("#dayfive");
                 $("#dayfivehumid").text("Humidity: " + response.list[34].main.humidity).appendTo("#dayfive");
-            });
+            });        
     });
 });
