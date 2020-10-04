@@ -46,23 +46,3 @@ h1 {
 .daydate {
     font-weight: bold;
 }
-
-.uvlow {
-    background-color: green;
-}
-
-.uvmoderate {
-    background-color: yellow;
-}
-
-.uvhigh {
-    background-color: orange;
-}
-
-.uvveryhigh {
-    background-color: red;
-}
-
-.uvextreme {
-    background-color: violet;
-}
