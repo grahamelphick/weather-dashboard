@@ -6,11 +6,6 @@ h1 {
     text-align: center;
 }
 
-/* #uv {
-    background-color: red;
-    color: white;
-} */
-
 #searchbtn {
     color: white;
     background-color: #007BFF;
@@ -45,4 +40,11 @@ h1 {
 
 .daydate {
     font-weight: bold;
+}
+
+.newcity {
+    text-align: left;
+    background-color: white;
+    margin-left: 0px;
+    border: 0.5px solid black;
 }
