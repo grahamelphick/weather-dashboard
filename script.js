@@ -34,7 +34,7 @@ $(document).ready(function () {
 
                     // UV index
                     var forecastQueryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&exclude=current,minutely,hourly,alerts" + "&units=imperial" + "&appid=" + APIKey;
-                    var uvQueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=" + APIKey
+                    var uvQueryURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=" + APIKey
                     $.ajax({
                         url: uvQueryURL,
                         method: "GET"
@@ -188,7 +188,7 @@ $(document).ready(function () {
 
                     // UV index
                     var forecastQueryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&exclude=current,minutely,hourly,alerts" + "&units=imperial" + "&appid=" + APIKey;
-                    var uvQueryURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=" + APIKey
+                    var uvQueryURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=" + APIKey
                     $.ajax({
                         url: uvQueryURL,
                         method: "GET"
