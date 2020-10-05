@@ -81,6 +81,11 @@ $(document).ready(function () {
                             var dayThreeDate = moment().add(3, 'days').format("L");
                             var dayFourDate = moment().add(4, 'days').format("L");
                             var dayFiveDate = moment().add(5, 'days').format("L");
+                            var forecastIconIDDayOne = response.daily[1].weather[0].icon;
+                            var forecastIconIDDayTwo = response.daily[2].weather[0].icon;
+                            var forecastIconIDDayThree = response.daily[3].weather[0].icon;
+                            var forecastIconIDDayFour = response.daily[4].weather[0].icon;
+                            var forecastIconIDDayFive = response.daily[5].weather[0].icon;
 
                             console.log(response);
                             $("#fiveday").text("5-Day Forecast:").appendTo("#fivedaytitle");
@@ -88,22 +93,27 @@ $(document).ready(function () {
                             $(".alldays").css("background-color", "#007BFF");
 
                             $("#dayone-date").text(dayOneDate).appendTo("#dayone");
+                            $("<img>").attr("src", "http://openweathermap.org/img/wn/" + forecastIconIDDayOne + "@2x.png").appendTo("#dayone-date");
                             $("#dayonetemp").text("Temp: " + response.daily[1].temp.max + " ℉").appendTo("#dayone");
                             $("#dayonehumid").text("Humidity: " + response.daily[1].humidity + "%").appendTo("#dayone");
 
                             $("#daytwo-date").text(dayTwoDate).appendTo("#daytwo");
+                            $("<img>").attr("src", "http://openweathermap.org/img/wn/" + forecastIconIDDayTwo + "@2x.png").appendTo("#daytwo-date");
                             $("#daytwotemp").text("Temp: " + response.daily[2].temp.max + " ℉").appendTo("#daytwo");
                             $("#daytwohumid").text("Humidity: " + response.daily[2].humidity + "%").appendTo("#daytwo");
 
                             $("#daythree-date").text(dayThreeDate).appendTo("#daythree");
+                            $("<img>").attr("src", "http://openweathermap.org/img/wn/" + forecastIconIDDayThree + "@2x.png").appendTo("#daythree-date");
                             $("#daythreetemp").text("Temp: " + response.daily[3].temp.max + " ℉").appendTo("#daythree");
                             $("#daythreehumid").text("Humidity: " + response.daily[3].humidity + "%").appendTo("#daythree");
 
                             $("#dayfour-date").text(dayFourDate).appendTo("#dayfour");
+                            $("<img>").attr("src", "http://openweathermap.org/img/wn/" + forecastIconIDDayFour + "@2x.png").appendTo("#dayfour-date");
                             $("#dayfourtemp").text("Temp: " + response.daily[4].temp.max + " ℉").appendTo("#dayfour");
                             $("#dayfourhumid").text("Humidity: " + response.daily[4].humidity + "%").appendTo("#dayfour");
 
                             $("#dayfive-date").text(dayFiveDate).appendTo("#dayfive");
+                            $("<img>").attr("src", "http://openweathermap.org/img/wn/" + forecastIconIDDayFive + "@2x.png").appendTo("#dayfive-date");
                             $("#dayfivetemp").text("Temp: " + response.daily[5].temp.max + " ℉").appendTo("#dayfive");
                             $("#dayfivehumid").text("Humidity: " + response.daily[5].humidity + "%").appendTo("#dayfive");
                         });
@@ -225,8 +235,11 @@ $(document).ready(function () {
                             var dayThreeDate = moment().add(3, 'days').format("L");
                             var dayFourDate = moment().add(4, 'days').format("L");
                             var dayFiveDate = moment().add(5, 'days').format("L");
-                            var forecastIconID = response.daily[0].weather[0].icon;
-                            var forecastIcon = "http://openweathermap.org/img/wn/" + forecastIconID + "@2x.png";
+                            var forecastIconIDDayOne = response.daily[1].weather[0].icon;
+                            var forecastIconIDDayTwo = response.daily[2].weather[0].icon;
+                            var forecastIconIDDayThree = response.daily[3].weather[0].icon;
+                            var forecastIconIDDayFour = response.daily[4].weather[0].icon;
+                            var forecastIconIDDayFive = response.daily[5].weather[0].icon;
 
                             console.log(response);
                             $("#fiveday").text("5-Day Forecast:").appendTo("#fivedaytitle");
@@ -234,23 +247,27 @@ $(document).ready(function () {
                             $(".alldays").css("background-color", "#007BFF");
 
                             $("#dayone-date").text(dayOneDate).appendTo("#dayone");
-                            $("<img>").attr("src", forecastIcon).appendTo("#dayone");
+                            $("<img>").attr("src", "http://openweathermap.org/img/wn/" + forecastIconIDDayOne + "@2x.png").appendTo("#dayone-date");
                             $("#dayonetemp").text("Temp: " + response.daily[1].temp.max + " ℉").appendTo("#dayone");
                             $("#dayonehumid").text("Humidity: " + response.daily[1].humidity + "%").appendTo("#dayone");
 
                             $("#daytwo-date").text(dayTwoDate).appendTo("#daytwo");
+                            $("<img>").attr("src", "http://openweathermap.org/img/wn/" + forecastIconIDDayTwo + "@2x.png").appendTo("#daytwo-date");
                             $("#daytwotemp").text("Temp: " + response.daily[2].temp.max + " ℉").appendTo("#daytwo");
                             $("#daytwohumid").text("Humidity: " + response.daily[2].humidity + "%").appendTo("#daytwo");
 
                             $("#daythree-date").text(dayThreeDate).appendTo("#daythree");
+                            $("<img>").attr("src", "http://openweathermap.org/img/wn/" + forecastIconIDDayThree + "@2x.png").appendTo("#daythree-date");
                             $("#daythreetemp").text("Temp: " + response.daily[3].temp.max + " ℉").appendTo("#daythree");
                             $("#daythreehumid").text("Humidity: " + response.daily[3].humidity + "%").appendTo("#daythree");
 
                             $("#dayfour-date").text(dayFourDate).appendTo("#dayfour");
+                            $("<img>").attr("src", "http://openweathermap.org/img/wn/" + forecastIconIDDayFour + "@2x.png").appendTo("#dayfour-date");
                             $("#dayfourtemp").text("Temp: " + response.daily[4].temp.max + " ℉").appendTo("#dayfour");
                             $("#dayfourhumid").text("Humidity: " + response.daily[4].humidity + "%").appendTo("#dayfour");
 
                             $("#dayfive-date").text(dayFiveDate).appendTo("#dayfive");
+                            $("<img>").attr("src", "http://openweathermap.org/img/wn/" + forecastIconIDDayFive + "@2x.png").appendTo("#dayfive-date");
                             $("#dayfivetemp").text("Temp: " + response.daily[5].temp.max + " ℉").appendTo("#dayfive");
                             $("#dayfivehumid").text("Humidity: " + response.daily[5].humidity + "%").appendTo("#dayfive");
                         });
