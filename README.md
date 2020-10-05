@@ -9,7 +9,7 @@ https://grahamelphick.github.io/weather-dashboard/
 
 Screenshots of deployed application:
 <img src="./screenshots/original-screen.png" alt="landing page">
-<img src="./screenshots/information-screen.png" alt="results of search">
+<img src="./screenshots/results-screen.png" alt="results of search">
 
 
 When a user searches for a city, they are presented with current and future conditions for that city.
