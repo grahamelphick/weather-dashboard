@@ -2,6 +2,16 @@
 
 The weather dashboard allows a user to search for a city and find a variety of weather information for said city.
 
+
+Link to deployed application:
+https://grahamelphick.github.io/weather-dashboard/
+
+
+Screenshots of deployed application:
+<img src="./screenshots/original-screen.png" alt="landing page">
+<img src="./screenshots/information-screen" alt="results of search">
+
+
 When a user searches for a city, they are presented with current and future conditions for that city.
 
 For the current conditions, the user is provided with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index.
